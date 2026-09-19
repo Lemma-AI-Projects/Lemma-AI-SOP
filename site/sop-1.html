@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>新功能 · Lemma AI SOP</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <nav class="nav" aria-label="站点导航"><a href="overview.html" title="总览">总览</a><span class="sep">·</span><a href="sop-1.html" aria-current="page" title="新功能">1</a><span class="sep">·</span><a href="sop-2.html" title="任务分配">2</a><span class="sep">·</span><a href="sop-3.html" title="战略分析">3</a><span class="sep">·</span><a href="sop-4.html" title="元帮助">4</a><span class="sep">·</span><a href="glossary.html" title="术语与约定">术语</a></nav>
+    <button type="button" class="en-btn" id="en-btn" aria-controls="en-note" aria-expanded="false">EN</button>
+  </div>
+  <p class="en-note" id="en-note" hidden>英文版尚未提供</p>
+</header>
+<main class="doc">
+  <p class="doc-meta">当前在看：SOP-1 · 新功能 · <a href="overview.html">返回总览</a> · <a href="index.html">首页</a></p>
+  <article>
+<h1>新功能 SOP</h1>
+<blockquote><p><strong>想法 → 决策 → 交付 → 上线 → 对外 → 反馈</strong></p></blockquote>
+<h2>1. 想法 Idea</h2>
+<p>任何成员发现新机会、新需求、新问题，都可以提出。</p>
+<p><strong>放置：提案区</strong></p>
+<p>Idea 不要求成熟，但应能说明：</p>
+<blockquote><p>为什么想到它？它可能解决什么问题？</p></blockquote>
+<hr>
+<h2>2. 决策 Decision</h2>
+<p>团队讨论这个 Idea 是否值得做。</p>
+<p>重点判断：</p>
+<ul><li>为什么现在做？</li><li>解决什么真实问题？</li><li>是否符合当前方向？</li><li>成本与收益如何？</li><li>最大的不确定性是什么？</li></ul>
+<p>结果只有四种：</p>
+<blockquote><p><strong>做 / 不做 / 暂缓 / 先验证</strong></p></blockquote>
+<p>决定正式做之后，进入交付。</p>
+<p><strong>产物：正式决策与必要信息进入正式文档区。</strong></p>
+<hr>
+<h2>3. 交付 Delivery</h2>
+<p>将决定转化为可运行的产品。</p>
+<p>原则：</p>
+<blockquote><p><strong>最小实现，尽快获得真实反馈。</strong></p></blockquote>
+<p>成员通过自己的<strong>自我曝光文档</strong>同步当前计划、进度与遇到的问题；具体任务协作用<strong>飞书多维表格</strong>同步。</p>
+<p>完成后进行质量验收：</p>
+<blockquote><p>功能是否正常？是否真正解决了最初的问题？</p></blockquote>
+<hr>
+<h2>4. 上线 Launch</h2>
+<p>通过验收后上线。</p>
+<p>上线不是结束，而是开始获得真实反馈。</p>
+<hr>
+<h2>5. 对外 External</h2>
+<p>需要对外公开时，确认：</p>
+<blockquote><p>功能是否已经达到可以代表 Lemma 对外表达的标准？</p></blockquote>
+<p>对外的正式信息进入<strong>正式文档区</strong>，作为公司正式信息的一部分。</p>
+<hr>
+<h2>6. 反馈 Feedback</h2>
+<p>上线后观察真实使用情况。</p>
+<p>反馈可能产生：</p>
+<blockquote><p><strong>继续迭代 / 修改判断 / 新 Idea / 新技术问题</strong></p></blockquote>
+<p>重要的经验与知识进入正式文档区，供团队和新人理解。</p>
+<hr>
+<h1>生命周期</h1>
+<pre><code>提案区
+  ↓
+Idea
+  ↓
+Decision
+  ↓
+正式文档区
+  ↓
+Delivery
+  ↓
+Verification
+  ↓
+Launch
+  ↓
+External
+  ↓
+Feedback
+  ↓
+新 Idea / Knowledge</code></pre>
+<h3>三个空间的职责</h3>
+<p><strong>自我曝光文档</strong><br>个人的不同时间尺度计划、当前工作与思考。</p>
+<p><strong>提案区</strong><br>尚未形成正式判断的 Idea、机会、问题、风险。</p>
+<p><strong>正式文档区</strong><br>团队讨论后形成的正式计划、决策、知识和对外信息。</p>
+<p><strong>飞书多维表格</strong><br>用于实际工作协同与状态同步。</p>
+<blockquote><p><strong>SOP 只规定思考与流转，不规定每个功能必须采用完全相同的开发方式。</strong></p></blockquote>
+  </article>
+</main>
+<footer class="site-footer">by ceaserzhao</footer>
+<script>
+(function () {
+  var btn = document.getElementById('en-btn');
+  var note = document.getElementById('en-note');
+  if (!btn || !note) return;
+  btn.addEventListener('click', function () {
+    var willShow = note.hasAttribute('hidden');
+    if (willShow) { note.removeAttribute('hidden'); }
+    else { note.setAttribute('hidden', ''); }
+    btn.setAttribute('aria-expanded', willShow ? 'true' : 'false');
+  });
+})();
+</script>
+</body>
+</html>

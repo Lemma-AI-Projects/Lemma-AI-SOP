@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lemma AI SOP</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <nav class="nav" aria-label="站点导航"><a href="overview.html" title="总览">总览</a><span class="sep">·</span><a href="sop-1.html" title="新功能">1</a><span class="sep">·</span><a href="sop-2.html" title="任务分配">2</a><span class="sep">·</span><a href="sop-3.html" title="战略分析">3</a><span class="sep">·</span><a href="sop-4.html" title="元帮助">4</a><span class="sep">·</span><a href="glossary.html" title="术语与约定">术语</a></nav>
+    <button type="button" class="en-btn" id="en-btn" aria-controls="en-note" aria-expanded="false">EN</button>
+  </div>
+  <p class="en-note" id="en-note" hidden>英文版尚未提供</p>
+</header>
+<main class="home">
+  <h1 class="home-title">Lemma AI SOP</h1>
+  <p class="home-tagline">团队如何思考，以及信息如何流转。</p>
+  <nav class="entries" aria-label="文档入口">
+    <a href="overview.html">总览</a>
+    <a href="sop-1.html">新功能</a>
+    <a href="sop-2.html">任务分配</a>
+    <a href="sop-3.html">战略分析</a>
+    <a href="sop-4.html">元帮助</a>
+    <a href="glossary.html">术语与约定</a>
+  </nav>
+</main>
+<footer class="site-footer">by ceaserzhao</footer>
+<script>
+(function () {
+  var btn = document.getElementById('en-btn');
+  var note = document.getElementById('en-note');
+  if (!btn || !note) return;
+  btn.addEventListener('click', function () {
+    var willShow = note.hasAttribute('hidden');
+    if (willShow) { note.removeAttribute('hidden'); }
+    else { note.setAttribute('hidden', ''); }
+    btn.setAttribute('aria-expanded', willShow ? 'true' : 'false');
+  });
+})();
+</script>
+</body>
+</html>

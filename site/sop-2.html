@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>任务分配 · Lemma AI SOP</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <nav class="nav" aria-label="站点导航"><a href="overview.html" title="总览">总览</a><span class="sep">·</span><a href="sop-1.html" title="新功能">1</a><span class="sep">·</span><a href="sop-2.html" aria-current="page" title="任务分配">2</a><span class="sep">·</span><a href="sop-3.html" title="战略分析">3</a><span class="sep">·</span><a href="sop-4.html" title="元帮助">4</a><span class="sep">·</span><a href="glossary.html" title="术语与约定">术语</a></nav>
+    <button type="button" class="en-btn" id="en-btn" aria-controls="en-note" aria-expanded="false">EN</button>
+  </div>
+  <p class="en-note" id="en-note" hidden>英文版尚未提供</p>
+</header>
+<main class="doc">
+  <p class="doc-meta">当前在看：SOP-2 · 任务分配 · <a href="overview.html">返回总览</a> · <a href="index.html">首页</a></p>
+  <article>
+<h1>任务分配 SOP</h1>
+<h2>1. Trigger</h2>
+<p>当一个明确需要完成的事情出现时，启动任务分配。</p>
+<p>来源可以是：</p>
+<ul><li>新功能</li><li>技术研发</li><li>战略工作</li><li>日常运营</li><li>其他临时事项</li></ul>
+<hr>
+<h2>2. 判断任务</h2>
+<p>先明确：</p>
+<blockquote><p><strong>要解决什么问题？最终需要得到什么结果？</strong></p></blockquote>
+<p>再判断：</p>
+<blockquote><p><strong>这个任务需要什么能力、多少时间、什么程度的自主权？</strong></p></blockquote>
+<p>不要先从“谁现在有空”开始。</p>
+<hr>
+<h2>3. 确定负责人</h2>
+<p>选择最适合承担结果的人。</p>
+<p>负责人不是“帮忙的人”，而是：</p>
+<blockquote><p><strong>对最终结果负责的人。</strong></p></blockquote>
+<p>需要其他成员协作时，再明确协作者。</p>
+<p>一个任务原则上只能有一个最终负责人。</p>
+<hr>
+<h2>4. 进入协同</h2>
+<p>任务进入<strong>飞书多维表格</strong>，同步：</p>
+<blockquote><p>任务 / 负责人 / 协作者 / 状态 / 截止时间</p></blockquote>
+<p>负责人通过<strong>自我曝光文档</strong>同步自己的整体计划与任务关系。</p>
+<p>如果任务本身产生新的想法、风险或机会：</p>
+<blockquote><p><strong>进入提案区。</strong></p></blockquote>
+<p>如果形成正式判断、计划或知识：</p>
+<blockquote><p><strong>进入正式文档区。</strong></p></blockquote>
+<hr>
+<h2>5. 执行与分歧</h2>
+<p>执行过程中，负责人拥有推进任务所需的自主权。</p>
+<p>如果出现分歧：</p>
+<blockquote><p><strong>先回到目标与事实，再讨论方案。</strong></p></blockquote>
+<p>如果分歧无法解决，升级到团队决策，而不是让任务长期停滞。</p>
+<hr>
+<h2>6. 完成</h2>
+<p>完成不是“做完动作”，而是：</p>
+<blockquote><p><strong>预先定义的结果已经达到。</strong></p></blockquote>
+<p>任务结束后，必要的经验、决策和知识沉淀到<strong>正式文档区</strong>。</p>
+<hr>
+<h3>核心原则</h3>
+<blockquote><p><strong>按问题分配，而不是按职位分配。</strong></p></blockquote>
+<blockquote><p><strong>责任可以协作，最终负责人必须明确。</strong></p></blockquote>
+<blockquote><p><strong>任务同步用多维表格，个人状态用自我曝光文档，未成熟想法进入提案区，正式结论进入正式文档区。</strong></p></blockquote>
+  </article>
+</main>
+<footer class="site-footer">by ceaserzhao</footer>
+<script>
+(function () {
+  var btn = document.getElementById('en-btn');
+  var note = document.getElementById('en-note');
+  if (!btn || !note) return;
+  btn.addEventListener('click', function () {
+    var willShow = note.hasAttribute('hidden');
+    if (willShow) { note.removeAttribute('hidden'); }
+    else { note.setAttribute('hidden', ''); }
+    btn.setAttribute('aria-expanded', willShow ? 'true' : 'false');
+  });
+})();
+</script>
+</body>
+</html>

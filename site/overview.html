@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>总览 · Lemma AI SOP</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <nav class="nav" aria-label="站点导航"><a href="overview.html" aria-current="page" title="总览">总览</a><span class="sep">·</span><a href="sop-1.html" title="新功能">1</a><span class="sep">·</span><a href="sop-2.html" title="任务分配">2</a><span class="sep">·</span><a href="sop-3.html" title="战略分析">3</a><span class="sep">·</span><a href="sop-4.html" title="元帮助">4</a><span class="sep">·</span><a href="glossary.html" title="术语与约定">术语</a></nav>
+    <button type="button" class="en-btn" id="en-btn" aria-controls="en-note" aria-expanded="false">EN</button>
+  </div>
+  <p class="en-note" id="en-note" hidden>英文版尚未提供</p>
+</header>
+<main class="doc">
+  <p class="doc-meta">当前在看：总览 · README · <a href="index.html">首页</a></p>
+  <article>
+<p>作者：Ceaserzhao</p>
+<h3>在开始之前</h3>
+<p>这个文件夹是Lemma AI团队的SOP文档，而这篇文章就是总览加上后续制定的guide，<br>请每一个成员都认真阅读。</p>
+<h3>任务总览</h3>
+<p>首先我要警惕过度设计，所以我要先来一个比较unspecific的结构规划：</p>
+<pre><code>                 COMPANY
+                    │
+              Principles
+                    │
+          ┌─────────┴─────────┐
+          │                   │
+       Trigger             Standards
+          │                   │
+       Process ───────→ Decision
+          │                   │
+       Artifact ←────── Feedback
+          │
+       Knowledge</code></pre>
+<p>一个科技初创公司有这些任务：</p>
+<ol><li>产品开发：将idea变为可运行的代码/sexy的网页；</li><li>技术研发：有些技术或知识在行业的边界之外，需要团队自己探索；</li><li>权衡&amp;决策：在权衡再三之后，我把权衡&amp;决策看作是一个单独的任务类别，e.g 权衡哪一个公司架构，法律路线更好，然后决策；</li></ol>
+<p>我将一个功能的生命周期展示如下：</p>
+<pre><code>[想法] → [决策] → [交付] → [上线] → [对外]
+                    ↑
+             质量验收 / 知识与新人</code></pre>
+<p>在接下来的编写中我也会考虑这些部分。</p>
+<h3>规划详情</h3>
+<p>我规划了如下几个SOP（初创时期）：</p>
+<p><strong>1.新功能</strong>：</p>
+<p>一个新功能从想法到代码的步骤。</p>
+<p><strong>2.任务分配</strong>：</p>
+<p>团队如何协作，如何分配工作，遇到争执应该如何解决。</p>
+<p><strong>3.战略分析</strong>：</p>
+<p>当一方有重大想法（会牵动大量文件的更改，商业模式的改变或是部<br>署硬件上的大范围更改）或是察觉到市场环境改变时，应当查看此文<br>档，与团队进行战略分析</p>
+<p><strong>4.元帮助</strong>：</p>
+<p>如果其他三个SOP解决不了你的问题，那你就来看这个。</p>
+<h3>现在可以打开看的</h3>
+<p><strong>1.新功能</strong>：<a href="sop-1.html">SOP-1 新功能.md</a></p>
+<p><strong>2.任务分配</strong>：<a href="sop-2.html">SOP-2 任务分配.md</a></p>
+<p><strong>3.战略分析</strong>：<a href="sop-3.html">SOP-3 战略分析.md</a></p>
+<p><strong>4.元帮助</strong>：<a href="sop-4.html">SOP-4 元帮助.md</a></p>
+<p><strong>术语</strong>：<a href="glossary.html">术语与约定.md</a>——各文档里出现名词的权威解释。</p>
+<p>四份 SOP 都已成文。</p>
+<p><mark>注：随后也会更新相关的Github Pages，方便成员随时查看</mark></p>
+<pre class="pre-indent"><code>                                          2026年9月18日</code></pre>
+<pre class="pre-indent"><code>                                    2026.9.17  23：12
+                                    ceaserzhao
+                                    Mianyang , China</code></pre>
+<p>Raised my spirit up,<br>never down when u'r around,<br>when we,<br>all alone,<br>holding more than hands</p>
+  </article>
+</main>
+<footer class="site-footer">by ceaserzhao</footer>
+<script>
+(function () {
+  var btn = document.getElementById('en-btn');
+  var note = document.getElementById('en-note');
+  if (!btn || !note) return;
+  btn.addEventListener('click', function () {
+    var willShow = note.hasAttribute('hidden');
+    if (willShow) { note.removeAttribute('hidden'); }
+    else { note.setAttribute('hidden', ''); }
+    btn.setAttribute('aria-expanded', willShow ? 'true' : 'false');
+  });
+})();
+</script>
+</body>
+</html>

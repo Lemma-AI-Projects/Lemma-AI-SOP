@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>元帮助 · Lemma AI SOP</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <nav class="nav" aria-label="站点导航"><a href="overview.html" title="总览">总览</a><span class="sep">·</span><a href="sop-1.html" title="新功能">1</a><span class="sep">·</span><a href="sop-2.html" title="任务分配">2</a><span class="sep">·</span><a href="sop-3.html" title="战略分析">3</a><span class="sep">·</span><a href="sop-4.html" aria-current="page" title="元帮助">4</a><span class="sep">·</span><a href="glossary.html" title="术语与约定">术语</a></nav>
+    <button type="button" class="en-btn" id="en-btn" aria-controls="en-note" aria-expanded="false">EN</button>
+  </div>
+  <p class="en-note" id="en-note" hidden>英文版尚未提供</p>
+</header>
+<main class="doc">
+  <p class="doc-meta">当前在看：SOP-4 · 元帮助 · <a href="overview.html">返回总览</a> · <a href="index.html">首页</a></p>
+  <article>
+<h1>元帮助 SOP</h1>
+<blockquote><p><strong>当现有 SOP 无法解决问题时，帮助你找到正确的思考方式与下一步。</strong></p></blockquote>
+<h2>1. 先判断卡在哪里</h2>
+<p>问三个问题：</p>
+<p><strong>这是一个真实问题吗？</strong><br>→ 如果不是，停止。</p>
+<p><strong>我是否理解这个问题？</strong><br>→ 如果不理解，说明存在认知缺口。</p>
+<p><strong>我们使用的方法是否仍然有效？</strong><br>→ 如果怀疑失效，重新审视方法。</p>
+<hr>
+<h2>2. 根据问题进入出口</h2>
+<h3>认知缺口</h3>
+<p>不知道相关知识、概念或技术。</p>
+<p><strong>出口：</strong></p>
+<blockquote><p>→ <strong>研究 / 学习文档</strong></p></blockquote>
+<p>形成可复用的知识后，进入<strong>正式文档区</strong>。</p>
+<hr>
+<h3>问题本身不清楚</h3>
+<p>不知道真正的问题是什么，或者存在多个可能的问题。</p>
+<p><strong>出口：</strong></p>
+<blockquote><p>→ <strong>提案区</strong></p></blockquote>
+<p>先暴露问题，不急着解决。</p>
+<hr>
+<h3>发现新的机会 / 风险</h3>
+<p>原来的工作中出现了新的重要发现。</p>
+<p><strong>出口：</strong></p>
+<blockquote><p>→ <strong>提案区</strong></p></blockquote>
+<p>由团队进一步判断。</p>
+<hr>
+<h3>发现方法或原则需要改变</h3>
+<p>发现现有 SOP、产品逻辑或工作方式可能失效。</p>
+<p><strong>出口：</strong></p>
+<blockquote><p>→ <strong>战略分析 SOP</strong></p></blockquote>
+<p>如果最终形成新的原则或方法：</p>
+<blockquote><p>→ <strong>正式文档区</strong></p></blockquote>
+<hr>
+<h3>需要团队判断</h3>
+<p>个人无法独立判断，或者问题涉及多个领域。</p>
+<p><strong>出口：</strong></p>
+<blockquote><p>→ <strong>团队讨论</strong></p></blockquote>
+<p>讨论后：</p>
+<p><strong>形成决策 → 正式文档区</strong><br><strong>仍然没有结论 → 提案区</strong></p>
+<hr>
+<h2>3. 元帮助的最终出口</h2>
+<p>任何问题最终只能进入几个地方：</p>
+<pre><code>                     元帮助
+                        │
+       ┌────────────────┼────────────────┐
+       ↓                ↓                ↓
+   认知缺口          问题/机会          方法失效
+       │                │                │
+    研究学习          提案区          战略分析
+       │                │                │
+       └──────────→ 正式文档区 ←─────────┘</code></pre>
+<p><strong>元帮助不负责替你解决所有问题。</strong></p>
+<p>它只负责：</p>
+<blockquote><p><strong>判断你现在到底卡在哪里，并把问题送到正确的地方。</strong></p></blockquote>
+  </article>
+</main>
+<footer class="site-footer">by ceaserzhao</footer>
+<script>
+(function () {
+  var btn = document.getElementById('en-btn');
+  var note = document.getElementById('en-note');
+  if (!btn || !note) return;
+  btn.addEventListener('click', function () {
+    var willShow = note.hasAttribute('hidden');
+    if (willShow) { note.removeAttribute('hidden'); }
+    else { note.setAttribute('hidden', ''); }
+    btn.setAttribute('aria-expanded', willShow ? 'true' : 'false');
+  });
+})();
+</script>
+</body>
+</html>

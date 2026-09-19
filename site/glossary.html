@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>术语与约定 · Lemma AI SOP</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <nav class="nav" aria-label="站点导航"><a href="overview.html" title="总览">总览</a><span class="sep">·</span><a href="sop-1.html" title="新功能">1</a><span class="sep">·</span><a href="sop-2.html" title="任务分配">2</a><span class="sep">·</span><a href="sop-3.html" title="战略分析">3</a><span class="sep">·</span><a href="sop-4.html" title="元帮助">4</a><span class="sep">·</span><a href="glossary.html" aria-current="page" title="术语与约定">术语</a></nav>
+    <button type="button" class="en-btn" id="en-btn" aria-controls="en-note" aria-expanded="false">EN</button>
+  </div>
+  <p class="en-note" id="en-note" hidden>英文版尚未提供</p>
+</header>
+<main class="doc">
+  <p class="doc-meta">当前在看：术语与约定 · <a href="overview.html">返回总览</a> · <a href="index.html">首页</a></p>
+  <article>
+<h1>术语与约定</h1>
+<p>本文件定义 SOP 文档里出现的术语。</p>
+<p><strong>术语的权威解释只有这一处。</strong>其他文档只使用它，不另行解释。若某份 SOP 里的话与本文件冲突，以本文件为准。</p>
+<p>一个术语除了"是什么"，还必须知道"什么时候不该用它"——所以每条都带一列<strong>边界</strong>。只写定义会让人以为这个词管一切。</p>
+<hr>
+<h2>一、协作空间</h2>
+<p>回答"这条信息该写在哪"。</p>
+<div class="table-wrap"><table><thead><tr><th>术语</th><th>定义</th><th>边界：什么时候不用它</th><th>出现于</th></tr></thead><tbody><tr><td><strong>提案区</strong></td><td>尚未形成正式判断的 Idea、机会、问题、风险。一切还没被团队讨论过的东西先落在这里。</td><td>已经讨论出结论、要作为团队行动依据的内容不留在提案区，应当进入正式文档区。</td><td>SOP-1、备忘录</td></tr><tr><td><strong>自我曝光文档</strong></td><td>个人的不同时间尺度计划、当前工作与思考。每个人有自己的一份，其他人可以查看。</td><td>不放团队级决策，也不放需要他人同步执行的任务；只反映本人的计划与状态。</td><td>SOP-1、备忘录</td></tr><tr><td><strong>正式文档区</strong></td><td>团队讨论后形成的正式计划、决策、知识和对外信息。团队对外表达的最终依据。</td><td>不是草稿箱。未经讨论、未定稿的内容不进入；个人计划也不进入。</td><td>SOP-1、备忘录</td></tr><tr><td><strong>飞书多维表格</strong></td><td>用于实际工作协同与状态同步的工具载体。</td><td>不是知识沉淀的地方。状态协同放这里，经验与知识放正式文档区。</td><td>SOP-1、备忘录（备忘录中称作"多维表格"）</td></tr></tbody></table></div>
+<p><strong>流转规则</strong>：想法先落提案区 → 讨论定稿后才进正式文档区 → 个人计划只进自我曝光文档 → 日常状态同步走飞书多维表格。</p>
+<hr>
+<h2>二、阶段</h2>
+<p>回答"一件事走到哪了"。</p>
+<div class="table-wrap"><table><thead><tr><th>术语</th><th>定义</th><th>边界：什么时候不用它</th><th>出现于</th></tr></thead><tbody><tr><td><strong>想法 / Idea</strong></td><td>任何成员发现的新机会、新需求、新问题。不要求成熟，但应能说明"为什么想到它、它可能解决什么问题"。</td><td>还没被讨论、没有判断的原始念头才是"想法"；一旦团队开始讨论，它就成为"决策"环节的议题。</td><td>README、SOP-1</td></tr><tr><td><strong>决策 / Decision</strong></td><td>团队讨论一个想法是否值得做的环节。判断"为什么现在做、解决什么真实问题、是否符合当前方向、成本与收益如何、最大的不确定性是什么"。</td><td>只有团队讨论才叫决策；个人自行决定不叫决策。结果只有四种：做 / 不做 / 暂缓 / 先验证。</td><td>README、SOP-1</td></tr><tr><td><strong>交付 / Delivery</strong></td><td>将决定转化为可运行的产品，原则是"最小实现，尽快获得真实反馈"。</td><td>交付不等于上线。未经验收的实现不是交付完成。</td><td>README、SOP-1</td></tr><tr><td><strong>上线 / Launch</strong></td><td>通过验收后让功能投入使用。上线不是结束，而是开始获得真实反馈。</td><td>上线不自动等于对外公开；对外的判断标准更严（见"对外"）。</td><td>README、SOP-1</td></tr><tr><td><strong>对外 / External</strong></td><td>需要对外公开时，确认功能是否已达到可以代表 Lemma 对外表达的标准。</td><td>不是每个功能都需要对外。标准未达到时，功能可以上线但不对外表达。</td><td>README、SOP-1</td></tr><tr><td><strong>反馈 / Feedback</strong></td><td>上线后观察真实使用情况，可能产生：继续迭代 / 修改判断 / 新 Idea / 新技术问题。</td><td>反馈不是意见收集；只有能改变后续判断（继续、修改、新增）的信息才算反馈。</td><td>SOP-1</td></tr></tbody></table></div>
+<hr>
+<h2>三、文档与角色</h2>
+<div class="table-wrap"><table><thead><tr><th>术语</th><th>定义</th><th>边界：什么时候不用它</th><th>出现于</th></tr></thead><tbody><tr><td><strong>SOP</strong></td><td>规定团队如何思考与信息如何流转的文档，不规定每个功能必须采用完全相同的开发方式。</td><td>不是技术方案、不是排期表、不是操作手册。具体做法由各成员自行判断。</td><td>README、SOP-1</td></tr><tr><td><strong>元帮助</strong></td><td>前三份 SOP 解决不了的问题来看的那一份。</td><td>不是常见问题清单，也不是求安慰的地方；它处理的是"连流程本身都不适用"的情况。</td><td>README、备忘录（尚未成文）</td></tr><tr><td><strong>质量验收 / Verification</strong></td><td>交付与上线之间的把关：功能是否正常？是否真正解决了最初的问题？</td><td>不是代码审查，也不只看"能不能跑"；要回答的是不是解决了最初的问题。</td><td>README、SOP-1</td></tr><tr><td><strong>知识与新人 / Knowledge</strong></td><td>沉淀下来的经验与知识，供团队和新人理解，进入正式文档区。</td><td>不是个人笔记，也不等于开发细节；能让下一个人不从零开始的内容才算。</td><td>README、SOP-1</td></tr></tbody></table></div>
+<hr>
+<h2>四、尚未定义的</h2>
+<p>以下内容<strong>目前故意没有全局规定</strong>。各份 SOP 写到时会单独说明，在此之前不要自行脑补统一规则：</p>
+<ul><li>改动多小算小、可以不走完整流转的门槛</li><li>对外发布由谁确认、谁有否决权</li><li>谁对最终决定拥有拍板权</li><li><code>en/</code> 英文版的对应术语</li><li>README 结构图里的 Trigger / Standards / Process / Artifact / Decision / Feedback / Knowledge / Principles——它们目前只是图上的结构标签，不是团队日常语言，暂不定义</li></ul>
+  </article>
+</main>
+<footer class="site-footer">by ceaserzhao</footer>
+<script>
+(function () {
+  var btn = document.getElementById('en-btn');
+  var note = document.getElementById('en-note');
+  if (!btn || !note) return;
+  btn.addEventListener('click', function () {
+    var willShow = note.hasAttribute('hidden');
+    if (willShow) { note.removeAttribute('hidden'); }
+    else { note.setAttribute('hidden', ''); }
+    btn.setAttribute('aria-expanded', willShow ? 'true' : 'false');
+  });
+})();
+</script>
+</body>
+</html>

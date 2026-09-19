@@ -1,0 +1,395 @@
+/* Lemma AI SOP — 站点样式表
+ *
+ * 风格基准：oasiscompany.org 的气质 —— 极简纯文字、大留白、克制到冷淡。
+ *
+ * 规则：
+ *   1. 只有一种强调色 --accent。链接、mark 高亮都用它；其余只有中性灰阶。
+ *   2. 不引入任何外部字体、CSS 框架、图标库、CDN 资源。
+ *   3. 单栏，正文最大宽度 680px，水平居中。
+ *   4. 正文 17.5px / 行高 1.8；一级标题显著大于正文。
+ *
+ * 本文件是站点样式的唯一来源：build.py 会把它原样复制到 site/style.css。
+ * 改动后重跑 `python build.py` 即可。
+ */
+
+:root {
+  /* 颜色：一个强调色 + 一套中性灰 */
+  --ink:          #111111;
+  --ink-soft:     #6b6b6b;
+  --paper:        #ffffff;
+  --line:         #e6e6e6;
+  --line-soft:    #efefef;
+  --wash:         #fafafa;
+  --accent:       #1d4e89;
+  --accent-weak:  rgba(29, 78, 137, 0.30);
+  --accent-mark:  rgba(29, 78, 137, 0.11);
+
+  /* 版心 */
+  --measure: 680px;
+  --pad: 24px;
+
+  /* 字体：中文优先的系统字体栈，全部本机字体 */
+  --sans: system-ui, -apple-system, "PingFang SC", "Hiragino Sans GB",
+          "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17.5px;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-wrap: break-word;
+}
+
+/* ---------------------------------------------------------------- 顶部导航 */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.topbar-inner {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 13px var(--pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.nav {
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+}
+
+.nav a {
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.nav a:hover { color: var(--accent); }
+
+.nav a[aria-current="page"] {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.nav .sep {
+  color: #cfcfcf;
+  margin: 0 7px;
+}
+
+.en-btn {
+  font-family: inherit;
+  font-size: 12.5px;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  color: var(--ink-soft);
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 5px 10px 4px;
+  cursor: pointer;
+}
+
+.en-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent-weak);
+}
+
+.en-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.en-note {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 var(--pad) 11px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  text-align: right;
+}
+
+.en-note[hidden] { display: none; }
+
+/* -------------------------------------------------------------------- 版心 */
+
+main {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 52px var(--pad) 88px;
+}
+
+.doc-meta {
+  margin: 0 0 44px;
+  font-size: 13px;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+}
+
+.doc-meta a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.doc-meta a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* -------------------------------------------------------------------- 首页 */
+
+main.home {
+  padding-top: 17vh;
+  padding-bottom: 96px;
+}
+
+.home-title {
+  margin: 0;
+  font-size: 2.35rem;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.home-tagline {
+  margin: 1.1rem 0 0;
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+}
+
+.entries {
+  margin-top: 3.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9rem;
+  font-size: 1.05rem;
+}
+
+.entries a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+}
+
+.entries a:hover { border-bottom-color: var(--accent-weak); }
+
+/* -------------------------------------------------------------------- 页脚 */
+
+.site-footer {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 var(--pad) 72px;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+}
+
+/* ---------------------------------------------------------------- 正文排版 */
+
+article > *:first-child { margin-top: 0; }
+
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  font-weight: 600;
+  line-height: 1.42;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+
+article h1 { font-size: 2.05rem; margin: 2.6em 0 0.85em; }
+article h2 { font-size: 1.36rem; margin: 2.5em 0 0.80em; }
+article h3 { font-size: 1.10rem; margin: 2.1em 0 0.70em; }
+article h4 { font-size: 1.00rem; margin: 1.9em 0 0.60em; }
+article h5,
+article h6 { font-size: 0.95rem; margin: 1.8em 0 0.60em; color: var(--ink-soft); }
+
+article p { margin: 0 0 1.35em; }
+
+article a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-weak);
+}
+
+article a:hover { border-bottom-color: var(--accent); }
+
+article strong { font-weight: 600; }
+
+article mark {
+  background: var(--accent-mark);
+  color: inherit;
+  padding: 0.08em 0.22em;
+  border-radius: 2px;
+}
+
+article hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 2.9em 0;
+}
+
+article blockquote {
+  margin: 0 0 1.35em;
+  padding: 0.10em 0 0.10em 1.15em;
+  border-left: 2px solid var(--line);
+}
+
+article blockquote > :last-child { margin-bottom: 0; }
+article blockquote p { margin: 0 0 0.7em; }
+
+article ul,
+article ol {
+  margin: 0 0 1.35em;
+  padding-left: 1.45em;
+}
+
+article li { margin: 0 0 0.40em; }
+article li::marker { color: var(--ink-soft); }
+article li > ul,
+article li > ol { margin: 0.40em 0 0; }
+
+/* 代码块：ASCII 图所在，必须等宽、保留原缩进 */
+article pre {
+  margin: 0 0 1.7em;
+  padding: 16px 18px;
+  background: var(--wash);
+  border: 1px solid var(--line-soft);
+  border-radius: 3px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  font-family: var(--mono);
+  font-size: 13.5px;
+  line-height: 1.6;
+  white-space: pre;
+  tab-size: 4;
+}
+
+article pre code {
+  font-family: inherit;
+  font-size: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+  white-space: pre;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+article code {
+  font-family: var(--mono);
+  font-size: 0.89em;
+  background: var(--wash);
+  border: 1px solid var(--line-soft);
+  border-radius: 2px;
+  padding: 0.06em 0.34em;
+}
+
+/* 表格：表头加粗，长行可横向滚动而不撑破页面 */
+article .table-wrap {
+  margin: 0 0 1.7em;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+article table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 15px;
+  line-height: 1.72;
+}
+
+article th,
+article td {
+  border: 1px solid var(--line);
+  padding: 9px 13px;
+  text-align: left;
+  vertical-align: top;
+}
+
+article th {
+  font-weight: 600;
+  background: var(--wash);
+  white-space: nowrap;
+}
+
+article td { white-space: normal; }
+
+article td > :last-child,
+article th > :last-child { margin-bottom: 0; }
+
+article img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.6em 0;
+}
+
+/* ------------------------------------------------------------ 窄屏（≤700） */
+
+@media (max-width: 700px) {
+  /* 窄屏下给术语表一个可读的最小宽度，由 .table-wrap 承担横向滚动 */
+  article table { min-width: 620px; }
+}
+
+@media (max-width: 480px) {
+  :root { --pad: 16px; }
+
+  body { font-size: 17px; }
+
+  main { padding-top: 40px; padding-bottom: 64px; }
+  main.home { padding-top: 12vh; }
+
+  .doc-meta { margin-bottom: 34px; }
+  .home-title { font-size: 2rem; }
+  .entries { font-size: 1rem; gap: 0.8rem; }
+
+  article h1 { font-size: 1.72rem; }
+  article h2 { font-size: 1.24rem; }
+
+  /* 收窄代码块字号与内边距，让两张 ASCII 图在 375px 内完整放下 */
+  article pre {
+    font-size: 12px;
+    line-height: 1.55;
+    padding: 14px 12px;
+  }
+
+  /* 纯缩进代码块（README 末尾的日期与落款）原始缩进达 42 个空格：
+     即便整行都是空白也要占 42 个字宽，只有把字号压到 ~10px 才能在
+     375px 内不产生横向滚动。图形类 <pre> 不受此规则影响。 */
+  article pre.pre-indent {
+    font-size: 9.5px;
+    line-height: 1.5;
+    padding: 10px 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

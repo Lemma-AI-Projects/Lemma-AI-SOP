@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>战略分析 · Lemma AI SOP</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <nav class="nav" aria-label="站点导航"><a href="overview.html" title="总览">总览</a><span class="sep">·</span><a href="sop-1.html" title="新功能">1</a><span class="sep">·</span><a href="sop-2.html" title="任务分配">2</a><span class="sep">·</span><a href="sop-3.html" aria-current="page" title="战略分析">3</a><span class="sep">·</span><a href="sop-4.html" title="元帮助">4</a><span class="sep">·</span><a href="glossary.html" title="术语与约定">术语</a></nav>
+    <button type="button" class="en-btn" id="en-btn" aria-controls="en-note" aria-expanded="false">EN</button>
+  </div>
+  <p class="en-note" id="en-note" hidden>英文版尚未提供</p>
+</header>
+<main class="doc">
+  <p class="doc-meta">当前在看：SOP-3 · 战略分析 · <a href="overview.html">返回总览</a> · <a href="index.html">首页</a></p>
+  <article>
+<h1>战略分析 SOP</h1>
+<blockquote><p><strong>重新理解现实 → 审视判断 → 比较路径 → 决策 → 更新</strong></p></blockquote>
+<p>战略分析用于处理<strong>会显著改变公司方向、资源配置或长期计划的事情</strong>。</p>
+<h2>1. 什么时候启动</h2>
+<p>出现以下情况之一时，启动战略分析：</p>
+<ul><li>市场或竞争环境发生重大变化</li><li>技术路线发生重大变化</li><li>产品方向需要重大调整</li><li>商业模式发生变化</li><li>法律、组织或公司结构发生重大变化</li><li>发现原有重要判断可能错误</li><li>出现可能改变公司未来的重要机会</li></ul>
+<p>日常问题不进入战略分析。</p>
+<hr>
+<h2>2. 重新看现实</h2>
+<p>不要直接讨论“怎么办”。</p>
+<p>先确认：</p>
+<blockquote><p><strong>发生了什么？什么真的变了？</strong></p></blockquote>
+<p>把<strong>事实、判断、假设</strong>分开。</p>
+<p>重点找到：</p>
+<blockquote><p><strong>哪个变化可能真正影响我们的方向？</strong></p></blockquote>
+<hr>
+<h2>3. 审视原来的判断</h2>
+<p>问：</p>
+<blockquote><p>我们为什么走现在这条路？<br>当初依赖什么判断？<br>这些判断现在还成立吗？</p></blockquote>
+<p>如果原来的核心假设已经失效，就不能因为“已经投入很多”而继续沿用。</p>
+<hr>
+<h2>4. 比较路径</h2>
+<p>不要只讨论自己最喜欢的方案。</p>
+<p>至少明确：</p>
+<blockquote><p><strong>继续 / 调整 / 转向</strong></p></blockquote>
+<p>比较它们的：</p>
+<blockquote><p><strong>收益、代价、风险、关键未知</strong></p></blockquote>
+<p>如果最大的未知无法判断：</p>
+<blockquote><p><strong>先验证，而不是强行决策。</strong></p></blockquote>
+<hr>
+<h2>5. 决策</h2>
+<p>形成明确结论：</p>
+<blockquote><p><strong>现在选择哪条路径，以及为什么。</strong></p></blockquote>
+<p>决策不是讨论的结束，而是公司行动的开始。</p>
+<hr>
+<h2>6. 更新现实</h2>
+<p>战略决策确定后，同步改变受影响的：</p>
+<ul><li>目标</li><li>计划</li><li>产品</li><li>技术路线</li><li>资源分配</li></ul>
+<p><strong>正式的战略判断、计划与公司信息 → 正式文档区</strong></p>
+<p><strong>个人后续计划 → 自我曝光文档</strong></p>
+<p><strong>具体执行任务 → 飞书多维表格</strong></p>
+<p>如果过程中出现新的机会、风险或未成熟想法：</p>
+<p><strong>→ 提案区</strong></p>
+<hr>
+<h2>7. 重新验证</h2>
+<p>战略没有永久有效期。</p>
+<p>当现实再次发生重要变化，或者关键判断出现新的证据：</p>
+<blockquote><p><strong>重新启动战略分析。</strong></p></blockquote>
+<h3>核心原则</h3>
+<blockquote><p><strong>战略不是预测未来，而是在现实变化时，持续判断我们应该把力量放在哪里。</strong></p></blockquote>
+<blockquote><p><strong>不要因为过去的选择正确，就假设它对未来仍然正确。</strong></p></blockquote>
+  </article>
+</main>
+<footer class="site-footer">by ceaserzhao</footer>
+<script>
+(function () {
+  var btn = document.getElementById('en-btn');
+  var note = document.getElementById('en-note');
+  if (!btn || !note) return;
+  btn.addEventListener('click', function () {
+    var willShow = note.hasAttribute('hidden');
+    if (willShow) { note.removeAttribute('hidden'); }
+    else { note.setAttribute('hidden', ''); }
+    btn.setAttribute('aria-expanded', willShow ? 'true' : 'false');
+  });
+})();
+</script>
+</body>
+</html>
